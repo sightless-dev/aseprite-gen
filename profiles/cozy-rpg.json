@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "cozy-rpg",
+  "revision": 1,
+  "scope": "Original static vegetation and wooden props, inspired by general illustrated RPG construction rules",
+  "provenance": {"method": "Measured private inventory and visual inspection of 21 contact sheets, plus native environment/item atlases", "training": "No model weights trained", "reference_images_included": false},
+  "canvas": {"alpha": "binary", "max_colors": 24, "preview_filter": "nearest", "outline_pixels": 1},
+  "lighting": {"direction": "upper-left", "status": "chosen consistent production rule; references have exceptions"},
+  "perspective": {"projection": "front-biased elevated orthographic", "status": "observed", "rule": "Show a shallow top surface and taller front; no isometric diamond axes"},
+  "palette": {
+    "foliage": ["#1d3430", "#28513b", "#397047", "#58934c", "#83b657", "#bdcf73"],
+    "autumn": ["#402c35", "#713b37", "#a04f37", "#c9763e", "#e6a854", "#f3d187"],
+    "wood": ["#342b32", "#604034", "#92583b", "#bd8047", "#e1ad63", "#f0cf8a"],
+    "metal": ["#303542", "#535b65", "#85949a", "#c2c9b4"],
+    "berries": ["#6e304b", "#ba5360", "#ee9b82"]
+  },
+  "observations": [
+    "Environment foliage uses overlapping pointed leaf clusters over a continuous dark mass.",
+    "Warm wood is separated into broad value planes with sparse directional grain and dark joinery.",
+    "One-pixel colored contours are common; deep overlap creases can be thicker.",
+    "Characters use exaggerated heads, compact torsos, narrow limbs, and high facial contrast.",
+    "Large atlases contain many object palettes; whole-atlas color counts are not per-object budgets.",
+    "Seasonal environment variants retain geometry while changing material ramps.",
+    "Technical paint masks, localized interfaces, scenery, effects and actors require separate treatment."
+  ],
+  "inferences": [
+    "Use 4-6 opaque shades per material, reserving brightest values for selected upper-left clusters.",
+    "Maintain 2-5 connected pixels in small leaf highlights, longer mass clusters below them.",
+    "Keep strong contrast at silhouette, overlaps, rim and focal details; reduce contrast in grain."
+  ],
+  "conflicts": [
+    "Some skies and light effects contain smooth gradients or partial alpha; isolated prop profile deliberately excludes these.",
+    "Some actors use nearly black outlines while environment foliage uses dark material colors.",
+    "A fixed upper-left light is a production choice, not a universal fact about every reference."
+  ],
+  "groups": {"primary": "vegetation and wooden environment props", "separate": ["actors and animation sheets", "seasonal environment palettes", "UI and typography", "effects and panoramas", "technical recolor masks"]},
+  "materials": {
+    "foliage": "Plan unequal lobes, overlap from back to front, use pointed or stepped leaf wedges; avoid independent outlined circles and random dots.",
+    "wood": "Shade the cylinder or trunk first; use interrupted vertical grain, broaden roots, and reserve dark pixels for recesses.",
+    "metal": "Use a compact cool ramp, a narrow highlight and a darker underside; keep bands curved with the vessel.",
+    "stone": "Use unequal angular masses and short broken seams; unimplemented by the preset generator.",
+    "cloth": "Use broad planes and a few directional folds; unimplemented by the preset generator."
+  },
+  "construction": {
+    "bush": ["Low asymmetric continuous silhouette", "Three overlapping foliage lobes", "Dark lower leaf skirt", "Grouped upper-left highlights", "Optional sparse berry triads"],
+    "tree": ["Rooted tapered trunk", "Visible fork", "Unequal crown lobes", "Overlapping leaf masses", "Broken bark grooves"],
+    "barrel": ["Bulging stave body", "Visible elliptical lid", "Curved upper/lower hoops", "Sparse stave seams", "Small offset bung"]
+  },
+  "quality": {"technical": ["Exact dimensions", "Binary alpha", "Palette membership", "Editable named layers", "Round-trip export"], "artistic": ["Recognizable at 1x", "Unequal rhythmic clusters", "Coherent light", "Useful negative space", "No unexplained detached pixels"], "verdict": "Requires actual image viewing; metrics are warnings, not artistic proof"}
+}

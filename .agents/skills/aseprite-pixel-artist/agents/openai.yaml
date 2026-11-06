@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aseprite Pixel Artist"
+  short_description: "Reference-guided pixel sprites in editable Aseprite"
+  default_prompt: "Use $aseprite-pixel-artist to create an original berry bush, review it at native scale, and refine the Aseprite layers."
