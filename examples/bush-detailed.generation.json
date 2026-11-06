@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "kind": "bush",
+    "autumn": false,
+    "berries": true,
+    "young": false,
+    "weathered": false,
+    "prompt": "berry bush",
+    "interpretation": "Bounded procedural grammar; only listed modifiers affect geometry. Codex can author arbitrary scene operations."
+  },
+  "seed": 7,
+  "style": "cozy-rpg",
+  "profile_revision": 1,
+  "profile_sha256": "35e18833cae9b28b5d35b980757a0bb20e10f5cd8232e4c3015a67ccd5f40aae",
+  "construction": [
+    "Low asymmetric continuous silhouette",
+    "Three overlapping foliage lobes",
+    "Dark lower leaf skirt",
+    "Grouped upper-left highlights",
+    "Optional sparse berry triads"
+  ],
+  "detail": true,
+  "visual_review": "pending",
+  "render": {
+    "aseprite_version": "1.3.18.6-dev",
+    "color_mode": "RGBA",
+    "frames": 1,
+    "height": 32,
+    "layer_names": [
+      "woody stems",
+      "foliage masses",
+      "berry accents"
+    ],
+    "palette": [
+      "#00000000",
+      "#1d3430ff",
+      "#28513bff",
+      "#397047ff",
+      "#58934cff",
+      "#83b657ff",
+      "#bdcf73ff",
+      "#342b32ff",
+      "#bd8047ff",
+      "#6e304bff",
+      "#ba5360ff",
+      "#ee9b82ff"
+    ],
+    "width": 48,
+    "aseprite_path": "bush-detailed.aseprite",
+    "png_path": "bush-detailed.png",
+    "sha256": "6afc5898363ab36c35ba71dd2f50694e0d3b42054c0ece9e50ca301d5f2693db"
+  },
+  "review": {
+    "path": "bush-detailed.png",
+    "width": 48,
+    "height": 32,
+    "colors": 10,
+    "visible_pixels": 719,
+    "transparent_pixels": 817,
+    "silhouette_component_sizes": [
+      719
+    ],
+    "singleton_color_pixels": 45,
+    "singleton_color_fraction": 0.0626,
+    "errors": [],
+    "warnings": [],
+    "technical_pass": true,
+    "artistic_verdict": "unreviewed: view native and nearest-neighbor previews; metrics cannot approve art"
+  }
+}

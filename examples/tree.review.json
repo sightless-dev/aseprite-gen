@@ -1,0 +1,25 @@
+{
+  "path": "tree.png",
+  "width": 64,
+  "height": 80,
+  "colors": 11,
+  "visible_pixels": 2347,
+  "transparent_pixels": 2773,
+  "silhouette_component_sizes": [
+    2347
+  ],
+  "singleton_color_pixels": 63,
+  "singleton_color_fraction": 0.0268,
+  "errors": [],
+  "warnings": [],
+  "technical_pass": true,
+  "artistic_verdict": "Model visual review completed; subjective, no human approval",
+  "artistic_review": {
+    "observation": "Crown reads more densely and bark has direction; lobe geometry remains regular.",
+    "viewed": [
+      "native PNG",
+      "nearest-neighbor preview",
+      "private reference comparison"
+    ]
+  }
+}
