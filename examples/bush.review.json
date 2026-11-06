@@ -1,0 +1,25 @@
+{
+  "path": "bush.png",
+  "width": 48,
+  "height": 32,
+  "colors": 10,
+  "visible_pixels": 729,
+  "transparent_pixels": 807,
+  "silhouette_component_sizes": [
+    729
+  ],
+  "singleton_color_pixels": 51,
+  "singleton_color_fraction": 0.07,
+  "errors": [],
+  "warnings": [],
+  "technical_pass": true,
+  "artistic_verdict": "Model visual review completed; subjective, no human approval",
+  "artistic_review": {
+    "observation": "Connected foliage is fuller; heavy dark skirt and repeated diagonals remain.",
+    "viewed": [
+      "native PNG",
+      "nearest-neighbor preview",
+      "private reference comparison"
+    ]
+  }
+}

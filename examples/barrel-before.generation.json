@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "kind": "barrel",
+    "autumn": false,
+    "berries": false,
+    "young": false,
+    "weathered": true,
+    "prompt": "weathered wooden barrel",
+    "interpretation": "Bounded procedural grammar; only listed modifiers affect geometry. Codex can author arbitrary scene operations."
+  },
+  "seed": 7,
+  "style": "cozy-rpg",
+  "profile_revision": 1,
+  "profile_sha256": "35e18833cae9b28b5d35b980757a0bb20e10f5cd8232e4c3015a67ccd5f40aae",
+  "construction": [
+    "Bulging stave body",
+    "Visible elliptical lid",
+    "Curved upper/lower hoops",
+    "Sparse stave seams",
+    "Small offset bung"
+  ],
+  "detail": false,
+  "visual_review": "pending",
+  "render": {
+    "aseprite_version": "1.3.18.6-dev",
+    "color_mode": "RGBA",
+    "frames": 1,
+    "height": 40,
+    "layer_names": [
+      "stave body",
+      "iron hoops",
+      "lid and rim"
+    ],
+    "palette": [
+      "#00000000",
+      "#342b32ff",
+      "#604034ff",
+      "#92583bff",
+      "#bd8047ff",
+      "#e1ad63ff",
+      "#303542ff",
+      "#535b65ff",
+      "#85949aff",
+      "#c2c9b4ff"
+    ],
+    "width": 32,
+    "aseprite_path": "barrel-before.aseprite",
+    "png_path": "barrel-before.png",
+    "sha256": "dd2d993ef05dd23591cd7440cdf27e320cd13d26db06db2b206f97ab1fdfafc7"
+  },
+  "review": {
+    "path": "barrel-before.png",
+    "width": 32,
+    "height": 40,
+    "colors": 9,
+    "visible_pixels": 692,
+    "transparent_pixels": 588,
+    "silhouette_component_sizes": [
+      692
+    ],
+    "singleton_color_pixels": 22,
+    "singleton_color_fraction": 0.0318,
+    "errors": [],
+    "warnings": [],
+    "technical_pass": true,
+    "artistic_verdict": "unreviewed: view native and nearest-neighbor previews; metrics cannot approve art"
+  }
+}

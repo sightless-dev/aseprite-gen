@@ -1,0 +1,25 @@
+{
+  "path": "barrel.png",
+  "width": 32,
+  "height": 40,
+  "colors": 9,
+  "visible_pixels": 692,
+  "transparent_pixels": 588,
+  "silhouette_component_sizes": [
+    692
+  ],
+  "singleton_color_pixels": 28,
+  "singleton_color_fraction": 0.0405,
+  "errors": [],
+  "warnings": [],
+  "technical_pass": true,
+  "artistic_verdict": "Model visual review completed; subjective, no human approval",
+  "artistic_review": {
+    "observation": "Broken rim and grain improve cylindrical reading; texture is still simpler than references.",
+    "viewed": [
+      "native PNG",
+      "nearest-neighbor preview",
+      "private reference comparison"
+    ]
+  }
+}
