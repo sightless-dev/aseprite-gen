@@ -20,17 +20,17 @@ Exact pixel-replication comparison found six images with a whole-image 4x repeti
 
 ## Chosen production rules and hypotheses
 
-Use the machine-readable [profile](../profiles/cozy-rpg.json). Its ramps are authored for original outputs; no source pixels are copied. Start with 4–6 shades per material and at most 24 visible colors. Use a consistent upper-left light. Both budgets and fixed lighting are design choices informed by the references, not measured universal laws.
+Use the machine-readable [profile](../profiles/cozy-rpg.json), revision 2 / schema 2. Its summer ramps follow observed object colors; geometry and leaf motifs are original, with no source pixels copied. Foliage and wood have eight available shades, metal four, and each output uses at most 24 visible colors. Bush foliage is yellow-green, tree foliage cooler jade-green, and barrel wood orange-red with warm dark hoops. Use a consistent upper-left light. Budgets and fixed lighting are production choices, not measured universal laws.
 
 Use binary alpha for isolated props, one native pixel grid, no antialiasing or random dither. Build broad shade planes before inserting leaves or grain. Reserve the brightest shade for sparse focal clusters. Favor connected 2–5-pixel small highlights, but inspect exceptions such as rivets and berries rather than deleting every single pixel.
 
 ## Construction recipes
 
-**Bush:** plan a low unequal silhouette; overlap three lobes; keep the bottom skirt dark; place connected leaf wedges along volume; add a few separated berry clusters when requested. Avoid equal round lobes, checkerboard highlights and a triangular hedge silhouette.
+**Bush:** use an upright, nearly square rounded crown on a 48×48 canvas. Build dark underleaves, occasional woody stems and overlapping pointed leaf sprays. Vary the contour and spray positions; keep deeper pockets near the base. Add sparse berries only when requested. The old low three-lobe construction was rejected for this reference group.
 
-**Tree:** draw roots and tapering trunk first, then a fork, rear foliage and larger foreground masses. Vary lobe height and width. Expose enough trunk for the species to read; add short bark grooves following the trunk, not horizontal bands. Do not reuse a bush at a larger scale as the entire tree.
+**Tree:** use a tall crown on a 64×96 canvas, a slender warm trunk, embedded forks and unequal roots. Overlap individual pointed leaves over dark underleaves; vary their positions and highlight groups. Bark grooves follow the trunk. Avoid the old stack of broad polygon lobes. The current preset still produces a more regular crown and simpler bark than the selected reference.
 
-**Barrel:** build a bulging body, shallow oval top and thicker front plane. Stave seams follow the cylinder. Hoops have an upper highlight and dark lower lip. Sparse grain and an offset bung prevent mechanical symmetry. Avoid a uniformly highlighted outline around the lid.
+**Barrel:** use a compact 32×32 canvas, bulging body, shallow oval lid and thicker front plane. Project individual staves around the cylinder so side staves narrow. Use orange-red wood, a golden rim and warm dark hoops; cold gray bands were a mismatch. Broken grain and an offset bung interrupt symmetry. Avoid a uniformly highlighted lid outline.
 
 Actor, stone and cloth rules are retained for future scene authoring; the preset generator does not implement those asset classes.
 

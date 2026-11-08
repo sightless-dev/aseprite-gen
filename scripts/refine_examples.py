@@ -1,15 +1,14 @@
-"""Apply the observed art-direction corrections through the actual MCP server."""
+"""Replay archived revision-1 correction arrays, independently of the current style."""
 import json
 from pathlib import Path
-from aseprite_gen.generation import plan
 from aseprite_gen.protocol import call_tool
 from aseprite_gen.validation import preview, review_png
 
 root=Path(__file__).resolve().parents[1]
 output=root/"examples"
 for kind,prompt in [("bush","berry bush"),("tree","old oak tree"),("barrel","weathered wooden barrel")]:
-    scene,meta=plan(prompt,seed=7)
-    correction=scene["layers"][-1]
+    scene=json.loads((output/f"{kind}-detailed.scene.json").read_text())
+    correction={"name":"art direction","operations":json.loads((output/f"{kind}.corrections.json").read_text())}
     source=output/f"{kind}-detailed.aseprite"
     result=call_tool("refine_sprite",{"path":str(source),"layer":correction["name"],"operations":correction["operations"],"output_name":kind},output)
     # Preserve the exact earlier scene plus the applied patch for reproducibility.

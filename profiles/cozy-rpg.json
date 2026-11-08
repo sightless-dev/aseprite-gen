@@ -1,18 +1,90 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "id": "cozy-rpg",
-  "revision": 1,
+  "revision": 2,
   "scope": "Original static vegetation and wooden props, inspired by general illustrated RPG construction rules",
-  "provenance": {"method": "Measured private inventory and visual inspection of 21 contact sheets, plus native environment/item atlases", "training": "No model weights trained", "reference_images_included": false},
-  "canvas": {"alpha": "binary", "max_colors": 24, "preview_filter": "nearest", "outline_pixels": 1},
-  "lighting": {"direction": "upper-left", "status": "chosen consistent production rule; references have exceptions"},
-  "perspective": {"projection": "front-biased elevated orthographic", "status": "observed", "rule": "Show a shallow top surface and taller front; no isometric diamond axes"},
+  "provenance": {
+    "method": "Overview inventory plus direct same-scale summer object comparison; rejected first generation replaced by controlled leaf groups and projected staves",
+    "training": "No model weights trained",
+    "reference_images_included": false
+  },
+  "canvas": {
+    "alpha": "binary",
+    "max_colors": 24,
+    "preview_filter": "nearest",
+    "outline_pixels": 1
+  },
+  "lighting": {
+    "direction": "upper-left",
+    "status": "chosen consistent production rule; references have exceptions"
+  },
+  "perspective": {
+    "projection": "front-biased elevated orthographic",
+    "status": "observed",
+    "rule": "Show a shallow top surface and taller front; no isometric diamond axes"
+  },
   "palette": {
-    "foliage": ["#1d3430", "#28513b", "#397047", "#58934c", "#83b657", "#bdcf73"],
-    "autumn": ["#402c35", "#713b37", "#a04f37", "#c9763e", "#e6a854", "#f3d187"],
-    "wood": ["#342b32", "#604034", "#92583b", "#bd8047", "#e1ad63", "#f0cf8a"],
-    "metal": ["#303542", "#535b65", "#85949a", "#c2c9b4"],
-    "berries": ["#6e304b", "#ba5360", "#ee9b82"]
+    "foliage": [
+      "#102a1a",
+      "#133c22",
+      "#176820",
+      "#198516",
+      "#1b9e11",
+      "#1eda04",
+      "#71ed21",
+      "#b2ff33"
+    ],
+    "autumn": [
+      "#3e1820",
+      "#642021",
+      "#8e311d",
+      "#b54c1c",
+      "#d86d23",
+      "#ed9637",
+      "#f7bf59",
+      "#ffe28a"
+    ],
+    "wood": [
+      "#34200d",
+      "#54300c",
+      "#795011",
+      "#9f6c19",
+      "#bf8a28",
+      "#dfa53c",
+      "#f1bf5e",
+      "#f8d588"
+    ],
+    "metal": [
+      "#30251d",
+      "#3b311f",
+      "#4e442e",
+      "#80643a"
+    ],
+    "berries": [
+      "#6e304b",
+      "#ba5360",
+      "#ee9b82"
+    ],
+    "tree_foliage": [
+      "#0e1508",
+      "#0f2622",
+      "#125138",
+      "#167449",
+      "#19a364",
+      "#1dd466",
+      "#55e96a",
+      "#89f76e"
+    ],
+    "barrel_wood": [
+      "#43151e",
+      "#5e1617",
+      "#7a292a",
+      "#a84d1b",
+      "#d46918",
+      "#ffa438",
+      "#ffd357",
+      "#ffe582"
+    ]
   },
   "observations": [
     "Environment foliage uses overlapping pointed leaf clusters over a continuous dark mass.",
@@ -24,7 +96,7 @@
     "Technical paint masks, localized interfaces, scenery, effects and actors require separate treatment."
   ],
   "inferences": [
-    "Use 4-6 opaque shades per material, reserving brightest values for selected upper-left clusters.",
+    "Use 6-8 deliberate shades for foliage or warm wood, retaining a controlled per-object palette. Previous 4-6-shade restriction was too rigid for these reference details.",
     "Maintain 2-5 connected pixels in small leaf highlights, longer mass clusters below them.",
     "Keep strong contrast at silhouette, overlaps, rim and focal details; reduce contrast in grain."
   ],
@@ -33,18 +105,107 @@
     "Some actors use nearly black outlines while environment foliage uses dark material colors.",
     "A fixed upper-left light is a production choice, not a universal fact about every reference."
   ],
-  "groups": {"primary": "vegetation and wooden environment props", "separate": ["actors and animation sheets", "seasonal environment palettes", "UI and typography", "effects and panoramas", "technical recolor masks"]},
+  "groups": {
+    "primary": "vegetation and wooden environment props",
+    "separate": [
+      "actors and animation sheets",
+      "seasonal environment palettes",
+      "UI and typography",
+      "effects and panoramas",
+      "technical recolor masks"
+    ]
+  },
   "materials": {
-    "foliage": "Plan unequal lobes, overlap from back to front, use pointed or stepped leaf wedges; avoid independent outlined circles and random dots.",
+    "foliage": "A continuous crown built from many overlapping pointed leaves; coherent top-left illumination, varied leaf direction, narrow shadow edges, no large loop-highlight blobs.",
     "wood": "Shade the cylinder or trunk first; use interrupted vertical grain, broaden roots, and reserve dark pixels for recesses.",
-    "metal": "Use a compact cool ramp, a narrow highlight and a darker underside; keep bands curved with the vessel.",
+    "metal": "Dark warm forged hoops with restrained ochre reflections; avoid broad silver bands in this summer prop profile.",
     "stone": "Use unequal angular masses and short broken seams; unimplemented by the preset generator.",
     "cloth": "Use broad planes and a few directional folds; unimplemented by the preset generator."
   },
   "construction": {
-    "bush": ["Low asymmetric continuous silhouette", "Three overlapping foliage lobes", "Dark lower leaf skirt", "Grouped upper-left highlights", "Optional sparse berry triads"],
-    "tree": ["Rooted tapered trunk", "Visible fork", "Unequal crown lobes", "Overlapping leaf masses", "Broken bark grooves"],
-    "barrel": ["Bulging stave body", "Visible elliptical lid", "Curved upper/lower hoops", "Sparse stave seams", "Small offset bung"]
+    "bush": [
+      "Upright rounded 48x48 silhouette",
+      "Dense overlapping pointed leaves",
+      "Visible occasional inner twig",
+      "Bright upper-facing leaf planes",
+      "Sparse optional berries"
+    ],
+    "tree": [
+      "Tapered warm trunk and unequal roots",
+      "Embedded visible fork",
+      "Continuous tall crown",
+      "Dense pointed leaves with varied overlap",
+      "Interrupted bark ribbons"
+    ],
+    "barrel": [
+      "Compact 32x32 bulging body",
+      "Individually projected convex staves",
+      "Warm wooden elliptical rim",
+      "Dark narrow curved hoops",
+      "Broken directional grain"
+    ]
   },
-  "quality": {"technical": ["Exact dimensions", "Binary alpha", "Palette membership", "Editable named layers", "Round-trip export"], "artistic": ["Recognizable at 1x", "Unequal rhythmic clusters", "Coherent light", "Useful negative space", "No unexplained detached pixels"], "verdict": "Requires actual image viewing; metrics are warnings, not artistic proof"}
+  "quality": {
+    "technical": [
+      "Exact dimensions",
+      "Binary alpha",
+      "Palette membership",
+      "Editable named layers",
+      "Round-trip export"
+    ],
+    "artistic": [
+      "Recognizable at 1x",
+      "Unequal rhythmic clusters",
+      "Coherent light",
+      "Useful negative space",
+      "No unexplained detached pixels"
+    ],
+    "verdict": "Requires actual image viewing; metrics are warnings, not artistic proof",
+    "rejected_revision": "Revision 1 failed the user style comparison: muted coarse lobes, repeated diagonal highlights, cold hoops. Technical checks did not establish artistic success."
+  },
+  "geometry": {
+    "bush": {
+      "canvas": [
+        48,
+        48
+      ],
+      "crown": [
+        24,
+        23,
+        18.5,
+        18
+      ],
+      "shape_power": 2.6
+    },
+    "tree": {
+      "canvas": [
+        64,
+        96
+      ],
+      "crown": [
+        32,
+        35,
+        22,
+        29
+      ]
+    },
+    "barrel": {
+      "canvas": [
+        32,
+        32
+      ]
+    }
+  },
+  "leaf_clusters": {
+    "spacing": 3.7,
+    "width": [
+      4,
+      7
+    ],
+    "length": [
+      5,
+      8
+    ],
+    "placement": "Dark underleaves, asymmetric three-leaf sprays, then pointed contour leaves; no repeated grid"
+  }
 }

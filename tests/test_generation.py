@@ -3,18 +3,18 @@ from pathlib import Path
 import pytest
 from PIL import Image
 from aseprite_gen.aseprite import validate_scene
-from aseprite_gen.generation import plan, parse_prompt
+from aseprite_gen.generation import plan, parse_prompt, load_profile
 from aseprite_gen.validation import review_png, preview
 
 
-@pytest.mark.parametrize("kind,size",[("bush",(48,32)),("tree",(64,80)),("barrel",(32,40))])
+@pytest.mark.parametrize("kind,size",[("bush",(48,48)),("tree",(64,96)),("barrel",(32,32))])
 def test_native_plans_are_repeatable_and_valid(kind,size):
     first,metadata=plan(kind,seed=7)
     assert first==plan(kind,seed=7)[0]
     valid=validate_scene(first)
     assert (valid["width"],valid["height"])==size
     assert len(valid["palette"])<=24
-    assert valid["layers"][-1]["name"]=="art direction"
+    assert len({layer["name"] for layer in valid["layers"]})==len(valid["layers"])
     assert metadata["visual_review"]=="pending"
     assert first != plan(kind,seed=8)[0]
 
@@ -32,6 +32,27 @@ def test_semantics_are_bounded_and_russian_wood_does_not_select_tree():
     assert parse_prompt("осенний куст с ягодами")["berries"]
     with pytest.raises(ValueError):plan("spaceship")
     with pytest.raises(ValueError):plan("tree",width=0,height=10)
+
+
+def test_persistent_profile_controls_geometry_not_only_metadata(tmp_path):
+    original=load_profile()
+    profile=tmp_path/"style.json"
+    profile.write_text(json.dumps(original))
+    first=plan("bush",seed=7,profile=profile)[0]
+    original["geometry"]["bush"]["crown"][2]=14
+    original["leaf_clusters"]["spacing"]=4.8
+    profile.write_text(json.dumps(original))
+    changed=plan("bush",seed=7,profile=profile)[0]
+    validate_scene(changed)
+    assert first["layers"]!=changed["layers"]
+    assert len(first["layers"][1]["operations"])!=0
+
+
+def test_unsupported_profile_schema_fails_before_rendering(tmp_path):
+    profile=tmp_path/"old.json"
+    profile.write_text(json.dumps({"schema_version":1}))
+    with pytest.raises(ValueError,match="schema 2"):
+        plan("bush",profile=profile)
 
 
 def test_metrics_detect_alpha_palette_and_dimensions_without_art_verdict(tmp_path):
@@ -61,6 +82,6 @@ def test_generate_review_commands_reopen_actual_source(tmp_path,capfd):
     result=json.loads(capfd.readouterr().out)
     assert result["technical_review"]["technical_pass"]
     with Image.open(tmp_path/"sample.review-native.png") as image:
-        assert image.size==(48,32)
+        assert image.size==(48,48)
     meta=json.loads((tmp_path/"sample.generation.json").read_text())
     assert meta["render"]["aseprite_path"]=="sample.aseprite"

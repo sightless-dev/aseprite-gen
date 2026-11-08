@@ -16,7 +16,9 @@ Work from the project containing this skill (`../../..` from this folder). Run i
 - **VARIATIONS:** Use `variations "autumn tree" --count 3 --seed 4 --name autumn`. Inspect differences; seeds change cluster placement or bung position, not every semantic aspect. For stronger silhouette variation modify lobe geometry in scene JSON.
 - **EXPORT:** Use `export output/bush-v2.aseprite --output output --name bush-release` to reopen and export editable source plus native PNG. Deliver the `.aseprite`, PNG, scene/generation metadata, and optional nearest-neighbor preview. Retain explicit caveats from review.
 
-The examples under `examples/` show real earlier and refined outputs. `docs/visual-review.md` explains their strengths and limitations. Use them as evidence of decisions, not templates to copy indiscriminately.
+Current outputs are under `examples/summer-v2/`. The original `examples/` sprites were rejected by the user for style mismatch: coarse muted foliage and cold barrel hoops. Treat them as negative examples. `docs/visual-review.md` preserves that finding.
+
+For style correction, compare the selected object's native reference crop with the actual output at the **same integer scale**, without normalizing object size. Use shape, leaf topology, material hue shifts and detail density as separate criteria. Whole-atlas overviews and successful file tests cannot establish a style match. The schema-2 profile drives canopy dimensions, cluster spacing, leaf sizes and material ramps; update these controls rather than adding cosmetic highlight patches to a mismatched structure. Preserve originals and report remaining visual differences.
 
 ## Invariants
 
