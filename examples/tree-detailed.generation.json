@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "spec": {
+    "kind": "tree",
+    "autumn": false,
+    "berries": false,
+    "young": false,
+    "weathered": true,
+    "prompt": "old oak tree",
+    "interpretation": "Bounded procedural grammar; only listed modifiers affect geometry. Codex can author arbitrary scene operations."
+  },
+  "seed": 7,
+  "style": "cozy-rpg",
+  "profile_revision": 1,
+  "profile_sha256": "35e18833cae9b28b5d35b980757a0bb20e10f5cd8232e4c3015a67ccd5f40aae",
+  "construction": [
+    "Rooted tapered trunk",
+    "Visible fork",
+    "Unequal crown lobes",
+    "Overlapping leaf masses",
+    "Broken bark grooves"
+  ],
+  "detail": true,
+  "visual_review": "pending",
+  "render": {
+    "aseprite_version": "1.3.18.6-dev",
+    "color_mode": "RGBA",
+    "frames": 1,
+    "height": 80,
+    "layer_names": [
+      "trunk and roots",
+      "rear crown",
+      "front crown"
+    ],
+    "palette": [
+      "#00000000",
+      "#1d3430ff",
+      "#28513bff",
+      "#397047ff",
+      "#58934cff",
+      "#83b657ff",
+      "#bdcf73ff",
+      "#342b32ff",
+      "#604034ff",
+      "#92583bff",
+      "#bd8047ff",
+      "#e1ad63ff"
+    ],
+    "width": 64,
+    "aseprite_path": "tree-detailed.aseprite",
+    "png_path": "tree-detailed.png",
+    "sha256": "f3d9c1d26ea8f2581bdea713a03c35fb2675b92219fae64c5610c4967f604672"
+  },
+  "review": {
+    "path": "tree-detailed.png",
+    "width": 64,
+    "height": 80,
+    "colors": 11,
+    "visible_pixels": 2337,
+    "transparent_pixels": 2783,
+    "silhouette_component_sizes": [
+      2337
+    ],
+    "singleton_color_pixels": 35,
+    "singleton_color_fraction": 0.015,
+    "errors": [],
+    "warnings": [],
+    "technical_pass": true,
+    "artistic_verdict": "unreviewed: view native and nearest-neighbor previews; metrics cannot approve art"
+  }
+}

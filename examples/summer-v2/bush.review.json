@@ -1,0 +1,29 @@
+{
+  "path": "bush.png",
+  "width": 48,
+  "height": 48,
+  "colors": 11,
+  "visible_pixels": 1416,
+  "transparent_pixels": 888,
+  "silhouette_component_sizes": [
+    1416
+  ],
+  "singleton_color_pixels": 327,
+  "singleton_color_fraction": 0.2309,
+  "errors": [],
+  "warnings": [
+    "Many single-color pixels: inspect highlights and potential noise"
+  ],
+  "technical_pass": true,
+  "artistic_verdict": "Model visually reviewed at native and 4x nearest-neighbor scales; closer in color and construction, with remaining differences; not user-approved.",
+  "visual_observations": {
+    "improvements": "Upright rounded silhouette; yellow-green pointed overlapping leaves; visible inner stems.",
+    "remaining": "Smoother contour and more regular leaf placement than the selected reference."
+  },
+  "source_verification": {
+    "transport": "real MCP stdio inspect_sprite",
+    "reopened_source_matches_png_pixels": true,
+    "source_hash_unchanged": true,
+    "aseprite_sha256": "54ee76010781b6203366b2abaa0e5397fd16b471f401cbbbb426465c46f0fbbe"
+  }
+}
